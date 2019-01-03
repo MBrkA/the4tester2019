@@ -1,3 +1,4 @@
+# All test cases created by Burak Akkaya
 FS001 = ["/", "d",
          ["studio", "d", ["zero.py", "f"], ["thakur.jpg", "f"]],
          ["home", "d",
@@ -155,3 +156,129 @@ C015 = ["cp earth/mountain.jpg /water/sea/",
 R015 = ("SUCCESS",
         ["/", "d", ["fire", "d"], ["water", "d", ["sea", "d"], ["lake", "d"]], ["earth", "d", ["mountain.jpg", "f"]],
          ["air", "d"]], "/earth")
+
+FS016 = ["/", "d",
+         ["the1", "d"],
+         ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]]],
+         ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
+         ["the4", "d"]]
+C016 = ["cp the3/the the4",
+        "cd the4/the",
+        "exec the3.py"]
+R016 = ("SUCCESS", ["/", "d",
+                    ["the1", "d"],
+                    ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]]],
+                    ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
+                    ["the4", "d", ["the", "d", ["the3.py", "f"]]]], "/the4/the")
+
+FS017 = ["/", "d",
+         ["the1", "d"],
+         ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]]],
+         ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
+         ["the4", "d"]]
+C017 = ["rmdir the3/the",
+        "cd the2/the"]
+R017 = ("SUCCESS", ["/", "d",
+                    ["the1", "d"],
+                    ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]]],
+                    ["the3", "d", ["rules.pdf", "f"]],
+                    ["the4", "d"]], "/the2/the")
+
+FS018 = ["/", "d",
+         ["the1", "d"],
+         ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]]],
+         ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
+         ["the4", "d"]]
+C018 = ["mkdir the1/the",
+        "cd the1/the",
+        "mkdir /the3/the"]
+R018 = ("ERROR", "mkdir /the3/the", "/the1/the")
+
+FS019 = ["/", "d",
+         ["the1", "d"],
+         ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]]],
+         ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
+         ["the4", "d"]]
+C019 = ["exec the2/the/first.txt",
+        "cd the3",
+        "exec the/the3.py",
+        "rm ../the2/the"]
+R019 = ("ERROR", "rm ../the2/the", "/the3")
+
+FS020 = ["/", "d",
+         ["the1", "d"],
+         ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]]],
+         ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
+         ["the4", "d"]]
+C020 = ["cp the3 the2/",
+        "rmdir the2/the3/the",
+        "cd the2/the/"]
+R020 = ("SUCCESS", ["/", "d",
+                    ["the1", "d"],
+                    ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]],
+                     ["the3", "d", ["rules.pdf", "f"]]],
+                    ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
+                    ["the4", "d"]], "/")
+
+FS021 = ["/", "d",
+         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
+C021 = ["cd second_line/first_column",
+        "exec a.txt",
+        "rmdir ../../first_line/second_column"]
+R021 = ("ERROR", "rmdir ../../first_line/second_column", "/second_line/first_column")
+
+FS022 = ["/", "d",
+         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
+C022 = ["mkdir second_line/first_column/alt_table",
+        "cp second_line/first_column first_line/first_column"]
+R022 = ("SUCCESS", ["/", "d",
+                    ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"],
+                                         ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"], ["alt_table", "d"]]],
+                     ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+                    ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"], ["alt_table", "d"]],
+                     ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]], "/")
+
+FS023 = ["/", "d",
+         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
+C023 = ["cd second_line",
+        "rmdir first_column"]
+R023 = ("ERROR", "rmdir first_column", "/second_line")
+
+FS024 = ["/", "d",
+         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
+C024 = ["cd first_line/second_column",
+        "cp a.txt /second_line/",
+        "rm a.txt"]
+R024 = ("SUCCESS", ["/", "d",
+                    ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+                     ["second_column", "d", ["b.txt", "f"]]],
+                    ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+                     ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]], ["a.txt", "f"]]],
+        "/first_line/second_column")
+
+FS025 = ["/", "d",
+         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
+C025 = ["exec first_line/second_column/a.txt",
+        "cd first_line/second_column",
+        "rm a.txt",
+        "rm b.txt",
+        "rmdir ../second_column"]
+R025 = ("SUCCESS", ["/", "d",
+                    ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+                    ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
+                     ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]], "/first_line/second_column")
