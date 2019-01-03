@@ -18,9 +18,6 @@ def prettify(Tree, space=0, prt=True):
 test_no = 1
 error = 0
 while test_no < 26:
-    if test_no is 8:
-        test_no += 1
-        continue
     test_fs = "FS" + "%03d" % test_no
     test_c = "C" + "%03d" % test_no
     test_r = "R" + "%03d" % test_no
