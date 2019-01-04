@@ -2,21 +2,21 @@
 FS001 = ["/", "d",
          ["studio", "d", ["zero.py", "f"], ["thakur.jpg", "f"]],
          ["home", "d",
-          ["psychology", "d", ["trauma", "d", ["pills.py"], ["coffee.jpg"]], ["versus.py", "f"],
+          ["psychology", "d", ["trauma", "d", ["pills.py", "f"], ["coffee.jpg", "f"]], ["versus.py", "f"],
            ["crazy", "d", ["stars.jpg", "f"], ["custody.avi", "f"]]],
-          ["street", "d", ["ritman.py", "f"], ["future.txt", "f"]]]]
+          ["street", "d", ["ritman.py", "f"], ["future.txt", "f"], ["jfd", "d"]]]]
 C001 = ["cd home/psychology/",
         "mkdir ../psychology/crazy/prison",
-        "rmdir /home/./street",
+        "rmdir /home/./street/jfd",
         "cd .././..//studio",
         "rm ../home/psychology/versus.py",
         "cp zero.py /home/"]
 R001 = ("SUCCESS", ["/", "d",
                     ["studio", "d", ["zero.py", "f"], ["thakur.jpg", "f"]],
                     ["home", "d",
-                     ["psychology", "d", ["trauma", "d", ["pills.py"], ["coffee.jpg"]],
-                      ["crazy", "d", ["stars.jpg", "f"],
-                       ["custody.avi", "f"], ["prison", "d"]]], ["zero.py", "f"]]], "/studio")
+                     ["psychology", "d", ["trauma", "d", ["pills.py", "f"], ["coffee.jpg", "f"]],
+                      ["crazy", "d", ["stars.jpg", "f"], ["custody.avi", "f"], ["prison", "d"]]],
+                     ["street", "d", ["ritman.py", "f"], ["future.txt", "f"]], ["zero.py", "f"]]], "/studio")
 
 FS002 = ["/", "d",
          ["movies", "d", ["2018", "d"], ["2010", "d"]],
