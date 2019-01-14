@@ -22,7 +22,7 @@ FS002 = ["/", "d",
          ["movies", "d", ["2018", "d"], ["2010", "d"]],
          ["series", "d", ["netflix", "d", ["black.avi", "f"], ["mirror.mkv", "f"]]],
          ["photos", "d"],
-         ["musics", "d", ["ajdar", "d", ["turp_gibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
+         ["musics", "d", ["ajdar", "d", ["turpgibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
 C002 = ["cd series/netflix",
         "rmdir .././/../musics/ajdar",
         "cd .."]
@@ -32,10 +32,10 @@ FS003 = ["/", "d",
          ["movies", "d", ["2018", "d"], ["2010", "d"]],
          ["series", "d", ["netflix", "d", ["black.avi", "f"], ["mirror.mkv", "f"]]],
          ["photos", "d"],
-         ["musics", "d", ["ajdar", "d", ["turp_gibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
+         ["musics", "d", ["ajdar", "d", ["turpgibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
 C003 = ["cd series/netflix",
         "exec black.avi",
-        "exec /musics/ajdar/turp_gibi.mp3",
+        "exec /musics/ajdar/turpgibi.mp3",
         "rm ../..//movies/2018",
         "cd /movies/2018"]
 R003 = ("ERROR", "rm ../..//movies/2018", "/series/netflix")
@@ -44,7 +44,7 @@ FS004 = ["/", "d",
          ["movies", "d", ["2018", "d"], ["2010", "d"]],
          ["series", "d", ["netflix", "d", ["black.avi", "f"], ["mirror.mkv", "f"]]],
          ["photos", "d"],
-         ["musics", "d", ["ajdar", "d", ["turp_gibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
+         ["musics", "d", ["ajdar", "d", ["turpgibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
 C004 = ["cd photos",
         "rm ../series/netflix/black.avi",
         "cp /movies/2010 ../musics/",
@@ -55,20 +55,20 @@ FS005 = ["/", "d",
          ["movies", "d", ["2018", "d"], ["2010", "d"]],
          ["series", "d", ["netflix", "d", ["black.avi", "f"], ["mirror.mkv", "f"]]],
          ["photos", "d"],
-         ["musics", "d", ["ajdar", "d", ["turp_gibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
+         ["musics", "d", ["ajdar", "d", ["turpgibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
 C005 = ["cd musics/tarkan",
-        "rmdir ../.././//./musics/tarkan"]
+        "rmdir ../.././//./musics/2010"]
 R005 = ("SUCCESS", ["/", "d",
                     ["movies", "d", ["2018", "d"], ["2010", "d"]],
                     ["series", "d", ["netflix", "d", ["black.avi", "f"], ["mirror.mkv", "f"]]],
                     ["photos", "d"],
-                    ["musics", "d", ["ajdar", "d", ["turp_gibi.mp3", "f"]], ["2010", "d"]]], "/musics/tarkan")
+                    ["musics", "d", ["ajdar", "d", ["turpgibi.mp3", "f"]], ["tarkan", "d"]]], "/musics/tarkan")
 
 FS006 = ["/", "d",
          ["movies", "d", ["2018", "d"], ["2010", "d"]],
          ["series", "d", ["netflix", "d", ["black.avi", "f"], ["mirror.mkv", "f"]]],
          ["photos", "d"],
-         ["musics", "d", ["ajdar", "d", ["turp_gibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
+         ["musics", "d", ["ajdar", "d", ["turpgibi.mp3", "f"]], ["tarkan", "d"], ["2010", "d"]]]
 C006 = ["exec movies/2018"]
 R006 = ("ERROR", "exec movies/2018", "/")
 
@@ -76,24 +76,24 @@ FS007 = ["/", "d",
          ["downloads", "d"], ["documents", "d", ["photoshop", "d"]],
          ["work", "d", ["cv.pdf", "f"], ["photos", "d"]],
          ["plans", "d", ["website", "d", ["index.php", "f"]]],
-         ["games", "d"], ["software", "d", ["valecnik_rpg", "d", ["main.py", "f"]]], ["other", "d"]]
+         ["games", "d"], ["software", "d", ["valecnikrpg", "d", ["main.py", "f"]]], ["other", "d"]]
 C007 = ["cd software",
         "mkdir ../games/finished",
-        "cp valecnik_rpg /games/finished/",
-        "cd ..//games/finished/valecnik_rpg"]
+        "cp valecnikrpg /games/finished/",
+        "cd ..//games/finished/valecnikrpg"]
 R007 = ("SUCCESS", ["/", "d",
                     ["downloads", "d"], ["documents", "d", ["photoshop", "d"]],
                     ["work", "d", ["cv.pdf", "f"], ["photos", "d"]],
                     ["plans", "d", ["website", "d", ["index.php", "f"]]],
-                    ["games", "d", ["finished", "d", ["valecnik_rpg", "d", ["main.py", "f"]]]],
-                    ["software", "d", ["valecnik_rpg", "d", ["main.py", "f"]]], ["other", "d"]],
-        "/games/finished/valecnik_rpg")
+                    ["games", "d", ["finished", "d", ["valecnikrpg", "d", ["main.py", "f"]]]],
+                    ["software", "d", ["valecnikrpg", "d", ["main.py", "f"]]], ["other", "d"]],
+        "/games/finished/valecnikrpg")
 
 FS008 = ["/", "d",
          ["downloads", "d"], ["documents", "d", ["photoshop", "d"]],
          ["work", "d", ["cv.pdf", "f"], ["photos", "d"]],
          ["plans", "d", ["website", "d", ["index.php", "f"]]],
-         ["games", "d"], ["software", "d", ["valecnik_rpg", "d", ["main.py", "f"]]], ["other", "d"]]
+         ["games", "d"], ["software", "d", ["valecnikrpg", "d", ["main.py", "f"]]], ["other", "d"]]
 C008 = ["cd work",
         "cd .../plans",
         "cd ../*"]
@@ -103,7 +103,7 @@ FS009 = ["/", "d",
          ["downloads", "d"], ["documents", "d", ["photoshop", "d"]],
          ["work", "d", ["cv.pdf", "f"], ["photos", "d"]],
          ["plans", "d", ["website", "d", ["index.php", "f"]]],
-         ["games", "d"], ["software", "d", ["valecnik_rpg", "d", ["main.py", "f"]]], ["other", "d"]]
+         ["games", "d"], ["software", "d", ["valecnikrpg", "d", ["main.py", "f"]]], ["other", "d"]]
 C009 = ["cd plans/website/index.php"]
 R009 = ("ERROR", "cd plans/website/index.php", "/")
 
@@ -111,17 +111,17 @@ FS010 = ["/", "d",
          ["downloads", "d"], ["documents", "d", ["photoshop", "d"]],
          ["work", "d", ["cv.pdf", "f"], ["photos", "d"]],
          ["plans", "d", ["website", "d", ["index.php", "f"]]],
-         ["games", "d"], ["software", "d", ["valecnik_rpg", "d", ["main.py", "f"]]], ["other", "d"]]
-C010 = ["cd software/valecnik_rpg",
+         ["games", "d"], ["software", "d", ["valecnikrpg", "d", ["main.py", "f"]]], ["other", "d"]]
+C010 = ["cd software/valecnikrpg",
         "rmdir ../../work",
         "cd /work"]
-R010 = ("ERROR", "cd /work", "/software/valecnik_rpg")
+R010 = ("ERROR", "rm ../../work", "/software/valecnikrpg")
 
 FS011 = ["/", "d",
          ["downloads", "d"], ["documents", "d", ["photoshop", "d"]],
          ["work", "d", ["cv.pdf", "f"], ["photos", "d"]],
          ["plans", "d", ["website", "d", ["index.php", "f"]]],
-         ["games", "d"], ["software", "d", ["valecnik_rpg", "d", ["main.py", "f"]]], ["other", "d"]]
+         ["games", "d"], ["software", "d", ["valecnikrpg", "d", ["main.py", "f"]]], ["other", "d"]]
 C011 = ["cd plans/*"]
 R011 = ("ERROR", "cd plans/*", "/")
 
@@ -154,8 +154,8 @@ C015 = ["cp earth/mountain.jpg /water/sea/",
         "rm mountain.jpg",
         "exec ../water/sea/mountain.jpg"]
 R015 = ("SUCCESS",
-        ["/", "d", ["fire", "d"], ["water", "d", ["sea", "d"], ["lake", "d"]], ["earth", "d", ["mountain.jpg", "f"]],
-         ["air", "d"]], "/earth")
+        ['/', 'd', ['fire', 'd'], ['water', 'd', ['sea', 'd', ['mountain.jpg', 'f']], ['lake', 'd']], ['earth', 'd'],
+         ['air', 'd']], "/earth")
 
 FS016 = ["/", "d",
          ["the1", "d"],
@@ -174,7 +174,7 @@ R016 = ("SUCCESS", ["/", "d",
 FS017 = ["/", "d",
          ["the1", "d"],
          ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]]],
-         ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
+         ["the3", "d", ["the", "d"], ["rules.pdf", "f"]],
          ["the4", "d"]]
 C017 = ["rmdir the3/the",
         "cd the2/the"]
@@ -208,7 +208,7 @@ R019 = ("ERROR", "rm ../the2/the", "/the3")
 FS020 = ["/", "d",
          ["the1", "d"],
          ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]]],
-         ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
+         ["the3", "d", ["the", "d"], ["rules.pdf", "f"]],
          ["the4", "d"]]
 C020 = ["cp the3 the2/",
         "rmdir the2/the3/the",
@@ -217,68 +217,69 @@ R020 = ("SUCCESS", ["/", "d",
                     ["the1", "d"],
                     ["the2", "d", ["the", "d", ["first.txt", "f"], ["the2.py", "f"]],
                      ["the3", "d", ["rules.pdf", "f"]]],
-                    ["the3", "d", ["the", "d", ["the3.py", "f"]], ["rules.pdf", "f"]],
-                    ["the4", "d"]], "/")
+                    ["the3", "d", ["the", "d"], ["rules.pdf", "f"]],
+                    ["the4", "d"]], "/the2/the")
 
 FS021 = ["/", "d",
-         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
-         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
-C021 = ["cd second_line/first_column",
+         ["firstline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["secondline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
+C021 = ["cd secondline/firstcolumn",
         "exec a.txt",
-        "rmdir ../../first_line/second_column"]
-R021 = ("ERROR", "rmdir ../../first_line/second_column", "/second_line/first_column")
+        "rmdir ../../firstline/secondcolumn"]
+R021 = ("ERROR", "rmdir ../../firstline/secondcolumn", "/secondline/firstcolumn")
 
 FS022 = ["/", "d",
-         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
-         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
-C022 = ["mkdir second_line/first_column/alt_table",
-        "cp second_line/first_column first_line/first_column"]
+         ["firstline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["secondline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
+C022 = ["mkdir secondline/firstcolumn/alttable",
+        "cp secondline/firstcolumn firstline/firstcolumn"]
 R022 = ("SUCCESS", ["/", "d",
-                    ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"],
-                                         ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"], ["alt_table", "d"]]],
-                     ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
-                    ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"], ["alt_table", "d"]],
-                     ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]], "/")
+                    ["firstline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"],
+                                        ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"], ["alttable", "d"]]],
+                     ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+                    ["secondline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"], ["alttable", "d"]],
+                     ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]]], "/")
 
 FS023 = ["/", "d",
-         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
-         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
-C023 = ["cd second_line",
-        "rmdir first_column"]
-R023 = ("ERROR", "rmdir first_column", "/second_line")
+         ["firstline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["secondline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
+C023 = ["cd secondline",
+        "rmdir firstcolumn"]
+R023 = ("ERROR", "rmdir firstcolumn", "/secondline")
 
 FS024 = ["/", "d",
-         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
-         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
-C024 = ["cd first_line/second_column",
-        "cp a.txt /second_line/",
+         ["firstline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["secondline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
+C024 = ["cd firstline/secondcolumn",
+        "cp a.txt /secondline/",
         "rm a.txt"]
 R024 = ("SUCCESS", ["/", "d",
-                    ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-                     ["second_column", "d", ["b.txt", "f"]]],
-                    ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-                     ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]], ["a.txt", "f"]]],
-        "/first_line/second_column")
+                    ["firstline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+                     ["secondcolumn", "d", ["b.txt", "f"]]],
+                    ["secondline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+                     ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]], ["a.txt", "f"]]],
+        "/firstline/secondcolumn")
 
 FS025 = ["/", "d",
-         ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
-         ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-          ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]]
-C025 = ["exec first_line/second_column/a.txt",
-        "cd first_line/second_column",
+         ["firstline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+         ["secondline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+          ["secondcolumn", "d"]]]
+C025 = ["exec firstline/secondcolumn/a.txt",
+        "cd firstline/secondcolumn",
         "rm a.txt",
         "rm b.txt",
-        "rmdir ../second_column"]
+        "rmdir /secondline/secondcolumn"]
 R025 = ("SUCCESS", ["/", "d",
-                    ["first_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]]],
-                    ["second_line", "d", ["first_column", "d", ["a.txt", "f"], ["b.txt", "f"]],
-                     ["second_column", "d", ["a.txt", "f"], ["b.txt", "f"]]]], "/first_line/second_column")
+                    ["firstline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]],
+                     ["secondcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]],
+                    ["secondline", "d", ["firstcolumn", "d", ["a.txt", "f"], ["b.txt", "f"]]]],
+        "/firstline/secondcolumn")
